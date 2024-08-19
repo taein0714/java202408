@@ -31,7 +31,7 @@ public class MultidimensionalArrayByNewExample {
 				
 			}
 		}
-			double totalMathAvg = (double) totalmathSum / totalStudent;
+			double totalMathAvg = (double) totalMathSum / totalStudent;
 			System.out.println("전체 학생의 수학 평균 점수: " + totalMathAvg);
 			System.out.println();
 			
@@ -52,7 +52,15 @@ public class MultidimensionalArrayByNewExample {
 			englishScores[1][2] = 94;
 			
 			totalStudent = 0;
-			int ta
+			int totalEnglishSum = 0;
+			for (int i = 0; i < englishScores.length; i++) {
+				totalStudent += englishScores[i].length;
+				for (int k = 0; k < englishScores[i].length; k++) {
+					totalEnglishSum += englishScores[i][k];
+				}
+			}
+			double totalEnglishAvg = (double) totalEnglishSum / totalStudent;
+			System.out.println("전체 학생의 영어 평균 점수: " + totalEnglishAvg);
 
 
 	}
